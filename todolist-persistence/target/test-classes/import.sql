@@ -1,3 +1,22 @@
+-- CategoryDaoTest
+-- testFindCategory
+-- ID = 1L
+INSERT INTO category(name) VALUES('testFindCategoryNameDB');
+-- testUpdateCategoryHasNameChanged
+-- ID = 2L
+INSERT INTO category(name) VALUES('testUpdateCategoryChangedNameDB');
+-- testUpdateCategoryHasRightName
+-- ID = 3L
+INSERT INTO category(name) VALUES('testUpdateCategoryRightNameDB');
+
 -- TaskDaoTest
 -- testFindableByLabel
-INSERT INTO task(label) VALUES('testFindableLabel');
+-- ID_TASK = 1L
+INSERT INTO task(label) VALUES('testFindableLabelDB');
+-- testListTasksForGivenUserAndCategory
+-- ID_USER = 1L
+INSERT INTO user(name) VALUES('testUserDB');
+-- ID_CATEGORY = 4L
+INSERT INTO category(name) VALUES('testCategoryDB');
+-- ID_TASK = 2L
+INSERT INTO task(label, id_user, id_category) VALUES('testListByUserAndCategoryDB', 1, 4);
