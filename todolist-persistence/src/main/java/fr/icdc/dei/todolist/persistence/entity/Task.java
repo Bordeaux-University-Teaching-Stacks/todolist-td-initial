@@ -30,6 +30,10 @@ public class Task {
 	@Column
 	private Date endingDate;
 	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="id_category")
+	private Category category;
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="id_user")
 	private User user;
@@ -77,6 +81,14 @@ public class Task {
 
 	public Date getBeginningDate() {
 		return beginningDate;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 	
 }
