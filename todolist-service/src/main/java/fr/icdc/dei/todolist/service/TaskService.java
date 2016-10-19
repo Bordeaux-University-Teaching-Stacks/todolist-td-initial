@@ -7,4 +7,6 @@ public interface TaskService {
 
 	List<Task> list();
 
+	Task add(Task task);
+
 }

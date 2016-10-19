@@ -20,4 +20,11 @@ public class TaskServiceImpl implements TaskService {
 		return taskDao.findAll();
 	}
 
+	@Override
+	public Task add(Task task) {
+		if(task.getUser().getTasks().size() < 10)
+			return taskDao.save(task);
+		return null;
+	}
+
 }
