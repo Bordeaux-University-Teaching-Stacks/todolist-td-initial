@@ -18,6 +18,7 @@
 		<java.version>1.7</java.version>
 		<hsqldb.version>2.3.3</hsqldb.version>
 		<bonecp.version>0.8.0.RELEASE</bonecp.version>
+		<java.servlet.version>2.5</java.servlet.version>
 		<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
 	</properties>
 
@@ -39,8 +40,14 @@
 		<dependencies>
 			<!-- TODOLIST PERSISTENCE -->
 			<dependency>
-				<groupId>fr.icdc</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>todolist-persistence</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- TODOLIST SERVICE -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>todolist-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!-- SPRING DATA -->
@@ -152,6 +159,28 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jdbc</artifactId>
 				<version>${spring.framework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.framework.version}</version>
+			</dependency>
+			<!-- Servlet -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${java.servlet.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
