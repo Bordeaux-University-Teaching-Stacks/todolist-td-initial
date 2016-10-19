@@ -37,6 +37,12 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- TODOLIST PERSISTENCE -->
+			<dependency>
+				<groupId>fr.icdc</groupId>
+				<artifactId>todolist-persistence</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<!-- SPRING DATA -->
 			<dependency>
 				<groupId>org.springframework.data</groupId>
