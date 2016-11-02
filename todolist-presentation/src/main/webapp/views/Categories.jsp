@@ -9,7 +9,7 @@
 <link href="<c:url value="/resources/css/materialize.min.css"/>"
 	type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<title>Tasks</title>
+<title>Catégories</title>
 </head>
 <body>
 	<nav>
@@ -17,7 +17,7 @@
       <a href="#!" class="brand-logo">Todolist</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="<c:url value="/categories"/>">Categories</a></li>
+        <li><a href="<c:url value="/categories"/>">Catégories</a></li>
         <li><a href="<c:url value="/tasks"/>">Tâches</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
@@ -27,10 +27,9 @@
     </div>
   </nav>
 	<ul class="collection">
-		<c:forEach items="${tasks}" var="task">
+		<c:forEach items="${categories}" var="category">
 			<li class="collection-item">
-				${task.label} commençant le 
-				<fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${task.beginningDate}" /></li>
+				${category.name}
 		</c:forEach>
 	</ul>
 	
